@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <img src="/images/logo.png" alt="logo da AluraFlix" />
       <nav>
         <ul>
@@ -15,7 +15,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   )
 }
 

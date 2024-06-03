@@ -3,6 +3,7 @@
   background-position: center;
   background-size: cover;
   height: 744px;
+  margin-bottom: 24px;
 }
 .content {
   background-color: rgba(0, 0, 0, 0.581);

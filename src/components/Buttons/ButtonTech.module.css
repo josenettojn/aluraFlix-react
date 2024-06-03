@@ -1,0 +1,18 @@
+.buttonTech {
+  width: 432px;
+  height: 70px;
+  font-size: 32px;
+  font-weight: 800;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--light-white);
+}
+@media(max-width: 768px) {
+  .buttonTech {
+    width: 286px;
+    font-size: 24px;
+  }
+}

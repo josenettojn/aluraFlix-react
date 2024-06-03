@@ -1,0 +1,29 @@
+{
+  "frontend": {
+    "color": "red",
+    "videos": [
+      {
+        "title": "Introdução ao React",
+        "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
+      },
+      {
+        "title": "Introdução ao React",
+        "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
+      },
+      {
+        "title": "Introdução ao React",
+        "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
+      }
+    ]
+  },
+  "backend": {
+    "color": "blue",
+    "videos": [
+      {
+        "title": "Introdução ao Node",
+        "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
+      }
+    ]
+  }
+}
+
