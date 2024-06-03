@@ -1,9 +1,10 @@
 import './App.css'
+import Header from './components/Header/Header'
 
 function App() {
   return (
     <>
-      <h2>alura flix</h2>
+      <Header />
     </>
   )
 }
