@@ -4,35 +4,35 @@
         {
           "id": 1,
           "title": "Introdução ao React",
-          "url": "https://www.youtube.com/watch?v=FAtrtmS7k9E"
+          "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
         },
         {
           "id": 2,
-          "title": "Introdução ao React 2",
-          "url": "https://www.youtube.com/watch?v=6DnZBlvnzFU"
+          "title": "Introdução ao React",
+          "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
         },
         {
           "id": 3,
-          "title": "Introdução ao React 3",
-          "url": "https://www.youtube.com/watch?v=6DnZBlvnzFU"
+          "title": "Introdução ao React",
+          "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
         }
       ],
       "backend": [
           {
             "id": 2,
             "title": "Introdução ao Node",
-            "url": "https://www.youtube.com/watch?v=6DnZBlvnzFU"
+            "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
           },
           {
             "id": 3,
-            "title": "Introdução ao Node 2",
-            "url": "https://www.youtube.com/watch?v=6DnZBlvnzFU"
+            "title": "Introdução ao Node",
+            "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
           }
         ],
       "mobile": [
           {
             "id": 3,
-            "title": "Introdução ao Node 1",
+            "title": "Introdução ao mobile",
             "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
           }
         ]

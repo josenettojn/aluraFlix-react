@@ -1,9 +1,13 @@
+import VideoPlayer from '../VideoYt/VideoYt'
 import styles from './Card.module.css'
 
-const Card = () => {
+const Card = (props) => {
+  const {title, url} = props
+  console.log('titulo', title)
   return (
     <div className={styles.card}>
-      <img className={styles.cardImage} src="/images/banner.png" alt="" />
+      <VideoPlayer videoUrl={url} />
+      <h3>{title}</h3>
       <div className={styles.actions}>
         <div className={styles.action}>
           <img src="/images/trash.png" alt="" />
