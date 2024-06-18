@@ -10,11 +10,13 @@ const NewVideo = () => {
   const [title, setTitle] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [videoUrl, setVideoUrl] = useState("");
+  const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
 
   const handleSendVideo = (e) => {
     e.preventDefault();
     console.log(title, imageUrl, videoUrl, description);
+    console.log(category);
     console.log("enviado");
   };
 
@@ -47,7 +49,10 @@ const NewVideo = () => {
             </div>
             <div className={styles.inputArea}>
               <Label>categoria</Label>
-              <Select />
+              <Select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+              />
             </div>
           </div>
           <div className={styles.inputs}>
