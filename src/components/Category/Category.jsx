@@ -5,8 +5,6 @@ import Container from '../Container/Container'
 import PropTypes from 'prop-types';
 
 const Category = ({tech, btnColor, dataTech}) => {
-
-  console.log('dataTech', dataTech)
   return (
     <Container>
       <section className={styles.category}>

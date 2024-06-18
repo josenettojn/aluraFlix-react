@@ -1,41 +1,35 @@
 {
-  "videos": {
-      "frontend": [
-        {
-          "id": 1,
-          "title": "Introdução ao React",
-          "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
-        },
-        {
-          "id": 2,
-          "title": "Introdução ao React",
-          "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
-        },
-        {
-          "id": 3,
-          "title": "Introdução ao React",
-          "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
-        }
-      ],
-      "backend": [
-          {
-            "id": 2,
-            "title": "Introdução ao Node",
-            "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
-          },
-          {
-            "id": 3,
-            "title": "Introdução ao Node",
-            "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
-          }
-        ],
-      "mobile": [
-          {
-            "id": 3,
-            "title": "Introdução ao mobile",
-            "url": "https://www.youtube.com/watch?v=JGwWbE9Pxns"
-          }
-        ]
+  "videos": [
+    {
+      "id": 1,
+      "category": "frontend",
+      "title": "Introdução ao React",
+      "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
+    },
+    {
+      "id": 2,
+      "category": "frontend",
+      "title": "Introdução ao React",
+      "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
+    },
+    {
+      "id": 3,
+      "category": "backend",
+      "title": "Introdução ao React",
+      "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
+    },
+    {
+      "id": 4,
+      "category": "backend",
+      "title": "Introdução ao Node",
+      "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
+    },
+    {
+      "id": 5,
+      "category": "mobile",
+      "title": "Introdução ao mobile",
+      "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
     }
+  ]
 }
 

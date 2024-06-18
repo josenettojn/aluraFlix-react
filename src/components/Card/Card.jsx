@@ -3,7 +3,6 @@ import styles from './Card.module.css'
 
 const Card = (props) => {
   const {title, url} = props
-  console.log('titulo', title)
   return (
     <div className={styles.card}>
       <VideoPlayer videoUrl={url} />
