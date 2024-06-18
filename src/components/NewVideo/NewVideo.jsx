@@ -1,6 +1,4 @@
 import styles from "./NewVideo.module.css";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 import { Input } from "../Inputs/Input";
 import { Label } from "../Inputs/Label";
 import { Select } from "../Inputs/Select";
@@ -9,7 +7,6 @@ import { TextArea } from "../Inputs/TextArea";
 const NewVideo = () => {
   return (
     <div className={styles.newVideo}>
-      <Header />
       <div className={styles.container}>
         <div>
           <h1 className={styles.title}>novo video</h1>
@@ -45,7 +42,6 @@ const NewVideo = () => {
           </div>
         </form>
       </div>
-      <Footer />
     </div>
   );
 };
