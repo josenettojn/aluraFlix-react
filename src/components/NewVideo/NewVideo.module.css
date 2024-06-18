@@ -1,0 +1,17 @@
+.newVideo {
+  background-color: #191919;
+}
+.container {
+  min-height: 90vh;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #191919;
+  color: #fff;
+}
+.input {
+  background-color: red;
+}
+.form {
+  width: 575px;
+}

@@ -25,6 +25,6 @@ export const CategoryContainer = ({category}) => {
       <Category tech="mobile" btnColor='#FFBA05' dataTech={mobileVideos}/>
    </main>
   )
-  }
+}
         
         
