@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import Container from "../Container/Container";
+import Button from "../Buttons/ButtonTech";
 
 const Header = () => {
   return (
@@ -13,10 +14,14 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/">home</Link>
+                <Button>
+                  <Link to="/">home</Link>
+                </Button>
               </li>
               <li>
-                <Link to="/new">novo vídeo</Link>
+                <Button>
+                  <Link to="/new">novo vídeo</Link>
+                </Button>
               </li>
             </ul>
           </nav>
