@@ -12,21 +12,32 @@ const NewVideo = () => {
       <Header />
       <div className={styles.container}>
         <div>
-          <h2>novo video</h2>
-          <p>Complete o formulário para criar um novo card de vídeo.</p>
+          <h1 className={styles.title}>novo video</h1>
+          <p className={styles.description}>
+            Complete o formulário para criar um novo card de vídeo.
+          </p>
         </div>
+        <h2 className={styles.subtitle}>Criar Card</h2>
         <form className={styles.form}>
-          <div>
-            <Label>título</Label>
-            <Input type="text" name="title" id="title" />
+          <div className={styles.inputs}>
+            <div className={styles.inputArea}>
+              <Label>título</Label>
+              <Input placeholder="digite o título do vídeo" />
+            </div>
+            <div className={styles.inputArea}>
+              <Label>categoria</Label>
+              <Select />
+            </div>
           </div>
-          <div>
-            <Label>categoria</Label>
-            <Select />
-          </div>
-          <div>
-            <Label>imagem</Label>
-            <Input type="text" name="title" id="title" />
+          <div className={styles.inputs}>
+            <div className={styles.inputArea}>
+              <Label>imagem</Label>
+              <Input placeholder="digite a url da imagem" />
+            </div>
+            <div className={styles.inputArea}>
+              <Label>video</Label>
+              <Input placeholder="digite a url do video" />
+            </div>
           </div>
           <div>
             <Label>descrição</Label>
