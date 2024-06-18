@@ -1,11 +1,14 @@
-import styles from './Footer.module.css'
+import { Link } from "react-router-dom";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <img src="/images/logo.png" alt="logo da AluraFlix no footer" />
+      <Link to="/">
+        <img src="/images/logo.png" alt="logo da AluraFlix" />
+      </Link>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
