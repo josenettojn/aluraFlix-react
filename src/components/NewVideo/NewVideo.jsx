@@ -3,8 +3,28 @@ import { Input } from "../Inputs/Input";
 import { Label } from "../Inputs/Label";
 import { Select } from "../Inputs/Select";
 import { TextArea } from "../Inputs/TextArea";
+import ButtonTech from "../Buttons/ButtonTech";
+import { useState } from "react";
 
 const NewVideo = () => {
+  const [title, setTitle] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [videoUrl, setVideoUrl] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSendVideo = (e) => {
+    e.preventDefault();
+    console.log(title, imageUrl, videoUrl, description);
+    console.log("enviado");
+  };
+
+  const handleClearInputs = (e) => {
+    e.preventDefault();
+    setTitle("");
+    setImageUrl("");
+    setVideoUrl("");
+    setDescription("");
+  };
   return (
     <div className={styles.newVideo}>
       <div className={styles.container}>
@@ -19,7 +39,11 @@ const NewVideo = () => {
           <div className={styles.inputs}>
             <div className={styles.inputArea}>
               <Label>título</Label>
-              <Input placeholder="digite o título do vídeo" />
+              <Input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="digite o título do vídeo"
+              />
             </div>
             <div className={styles.inputArea}>
               <Label>categoria</Label>
@@ -29,16 +53,34 @@ const NewVideo = () => {
           <div className={styles.inputs}>
             <div className={styles.inputArea}>
               <Label>imagem</Label>
-              <Input placeholder="digite a url da imagem" />
+              <Input
+                value={imageUrl}
+                onChange={(e) => setImageUrl(e.target.value)}
+                placeholder="digite a url da imagem"
+              />
             </div>
             <div className={styles.inputArea}>
               <Label>video</Label>
-              <Input placeholder="digite a url do video" />
+              <Input
+                value={videoUrl}
+                onChange={(e) => setVideoUrl(e.target.value)}
+                placeholder="digite a url do video"
+              />
             </div>
           </div>
           <div>
             <Label>descrição</Label>
-            <TextArea placeholder="sobre o que é esse vídeo" />
+            <TextArea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="sobre o que é esse vídeo"
+            />
+          </div>
+          <div className={styles.buttons}>
+            <ButtonTech onClick={(e) => handleSendVideo(e)}>Guardar</ButtonTech>
+            <ButtonTech onClick={(e) => handleClearInputs(e)}>
+              Limpar
+            </ButtonTech>
           </div>
         </form>
       </div>

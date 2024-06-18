@@ -1,14 +1,18 @@
-import styles from './ButtonTech.module.css'
+import styles from "./ButtonTech.module.css";
 
-const ButtonTech = ({bgColor, children}) => {
+const ButtonTech = ({ bgColor, borderColor, children, ...props }) => {
   return (
     <button
       className={styles.buttonTech}
-      style={{ backgroundColor: `${bgColor}` }}
+      style={{
+        backgroundColor: `${bgColor}`,
+        border: `1px solid ${borderColor}`,
+      }}
+      {...props}
     >
       {children}
     </button>
-  )
-}
+  );
+};
 
-export default ButtonTech
+export default ButtonTech;

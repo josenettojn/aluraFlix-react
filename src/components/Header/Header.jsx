@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import Container from "../Container/Container";
 import Button from "../Buttons/ButtonTech";
+import ButtonTech from "../Buttons/ButtonTech";
 
 const Header = () => {
   return (
@@ -14,9 +15,9 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <Button>
+                <ButtonTech>
                   <Link to="/">home</Link>
-                </Button>
+                </ButtonTech>
               </li>
               <li>
                 <Button>
