@@ -23,8 +23,19 @@ export const VideoProvider = ({ children }) => {
     setVideos((prevVideos) => [...prevVideos, newVideo]);
   };
 
+  const deleteVideo = async (id) => {
+    try {
+      await fetch(`http://localhost:5000/videos/${id}`, {
+        method: "DELETE",
+      });
+      setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
+    } catch (error) {
+      console.error("Erro ao deletar o vídeo:", error);
+    }
+  };
+
   return (
-    <VideoContext.Provider value={{ videos, addVideo }}>
+    <VideoContext.Provider value={{ videos, addVideo, deleteVideo }}>
       {children}
     </VideoContext.Provider>
   );

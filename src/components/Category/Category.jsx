@@ -1,10 +1,10 @@
-import styles from './Category.module.css'
-import ButtonTech from '../Buttons/ButtonTech'
-import Card from '../Card/Card'
-import Container from '../Container/Container'
-import PropTypes from 'prop-types';
+import styles from "./Category.module.css";
+import ButtonTech from "../Buttons/ButtonTech";
+import Card from "../Card/Card";
+import Container from "../Container/Container";
+import PropTypes from "prop-types";
 
-const Category = ({tech, btnColor, dataTech}) => {
+const Category = ({ tech, btnColor, dataTech }) => {
   return (
     <Container>
       <section className={styles.category}>
@@ -16,6 +16,7 @@ const Category = ({tech, btnColor, dataTech}) => {
                 key={item.id}
                 title={item.title}
                 url={item.url}
+                id={item.id}
               />
             ))
           ) : (
@@ -24,8 +25,8 @@ const Category = ({tech, btnColor, dataTech}) => {
         </div>
       </section>
     </Container>
-  )
-}
+  );
+};
 Category.propTypes = {
   dataTech: PropTypes.arrayOf(
     PropTypes.shape({
@@ -36,4 +37,4 @@ Category.propTypes = {
   ),
 };
 
-export default Category
+export default Category;

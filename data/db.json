@@ -19,24 +19,10 @@
       "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
     },
     {
-      "id": "4",
-      "category": "backend",
-      "title": "Introdução ao Node",
-      "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
-    },
-    {
       "id": "5",
       "category": "mobile",
       "title": "Introdução ao mobile",
       "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
-    },
-    {
-      "id": "7886",
-      "title": "test4",
-      "imageUrl": "https://www.youtube.com/watch?v=H3XmaW-SBfw",
-      "url": "https://www.youtube.com/watch?v=H3XmaW-SBfw",
-      "category": "frontend",
-      "description": "fesre"
     }
   ]
 }
