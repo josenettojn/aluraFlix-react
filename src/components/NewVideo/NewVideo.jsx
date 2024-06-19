@@ -5,6 +5,8 @@ import { Select } from "../Inputs/Select";
 import { TextArea } from "../Inputs/TextArea";
 import ButtonTech from "../Buttons/ButtonTech";
 import { useState } from "react";
+import { useVideos } from "../../context/VideoContext";
+import { useNavigate } from "react-router-dom";
 
 const NewVideo = () => {
   const [title, setTitle] = useState("");
@@ -12,44 +14,57 @@ const NewVideo = () => {
   const [videoUrl, setVideoUrl] = useState("");
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
+  const { addVideo } = useVideos();
+  const navigate = useNavigate();
 
-  const handleSendVideo = (e) => {
+  const handleSendVideo = async (e) => {
     e.preventDefault();
+
     console.log(title, imageUrl, videoUrl, description);
     console.log(category);
+
     const newVideo = {
       title,
       imageUrl,
-      videoUrl,
+      url: videoUrl,
       category,
       description,
     };
-    if (newVideo) {
-      fetch("http://localhost:5000/videos", {
+    try {
+      const response = await fetch("http://localhost:5000/videos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(newVideo),
-      }).then(() => {
-        console.log("enviado");
       });
 
-      handleClearInputs(e);
+      if (response.ok) {
+        console.log("Vídeo enviado com sucesso:", newVideo);
+        alert("Vídeo criado com sucesso!");
+        addVideo(newVideo);
+        handleClearInputs();
 
-      alert("Vídeo criado com sucesso!");
+        // Redireciona para a página inicial após adicionar o vídeo
+        navigate("/");
+      } else {
+        console.error("Erro ao enviar o vídeo:", response.statusText);
+        alert("Erro ao criar o vídeo.");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar o vídeo:", error);
+      alert("Erro ao criar o vídeo.");
     }
   };
 
-  const handleClearInputs = (e) => {
-    e.preventDefault();
-
+  const handleClearInputs = () => {
     setTitle("");
     setCategory("");
     setImageUrl("");
     setVideoUrl("");
     setDescription("");
   };
+
   return (
     <div className={styles.newVideo}>
       <div className={styles.container}>
@@ -106,9 +121,7 @@ const NewVideo = () => {
           </div>
           <div className={styles.buttons}>
             <ButtonTech onClick={(e) => handleSendVideo(e)}>Guardar</ButtonTech>
-            <ButtonTech onClick={(e) => handleClearInputs(e)}>
-              Limpar
-            </ButtonTech>
+            <ButtonTech onClick={handleClearInputs}>Limpar</ButtonTech>
           </div>
         </form>
       </div>

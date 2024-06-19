@@ -1,19 +1,10 @@
 import Category from "./Category";
-import { GetAllVideos } from "../../utils/GetData";
-import { useEffect, useState } from "react";
 import Container from "../Container/Container";
 import styles from "./CategoryContainer.module.css";
+import { useVideos } from "../../context/VideoContext";
 
 export const CategoryContainer = ({ category }) => {
-  const [videos, setVideos] = useState([]);
-  const fetchVideos = async () => {
-    const videos = await GetAllVideos();
-    setVideos(videos);
-  };
-
-  useEffect(() => {
-    fetchVideos();
-  }, [category]);
+  const { videos } = useVideos();
 
   const frontendVideos = videos.filter(
     (video) => video.category === "frontend"

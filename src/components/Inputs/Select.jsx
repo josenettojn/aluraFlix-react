@@ -1,5 +1,5 @@
 import styles from "./Select.module.css";
-let option = ["Frontend", "Backend", "Mobile"];
+let option = ["frontend", "backend", "mobile"];
 
 export const Select = ({ value, onChange }) => {
   return (

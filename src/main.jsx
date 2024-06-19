@@ -1,11 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 import { RouterProvider } from "react-router-dom";
-import { router } from './Routes/Routes';
+import { router } from "./Routes/Routes";
+import { VideoProvider } from "./context/VideoContext";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <VideoProvider>
+      <RouterProvider router={router} />
+    </VideoProvider>
   </React.StrictMode>
-)
+);

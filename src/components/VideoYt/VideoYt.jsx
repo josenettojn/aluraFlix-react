@@ -1,30 +1,27 @@
-import YouTube from "react-youtube";
-
 const VideoPlayer = ({ videoUrl }) => {
-  const getVideoId = (url) => {
-    // Regex para extrair o ID do vídeo do YouTube
-    const regExp =
-      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-    const match = url.match(regExp);
-    return match ? match[1] : null;
-  };
-
-  const videoId = getVideoId(videoUrl);
-
-  if (!videoId) {
-    return <div>URL do vídeo do YouTube inválida</div>;
+  if (!videoUrl) {
+    return <div>Url não encontrada</div>;
   }
 
-  const opts = {
-    height: "220",
-    width: "320",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
-    },
-  };
+  // Verificar se a URL fornecida já está no formato correto para o iframe
+  const isEmbedUrl = videoUrl.includes("youtube.com/embed/");
 
-  return <YouTube videoId={videoId} opts={opts} />;
+  // Se a URL não estiver no formato de embed, extrair o ID do vídeo e formar a URL embed
+  const embedUrl = isEmbedUrl
+    ? videoUrl
+    : videoUrl.replace("watch?v=", "embed/");
+
+  return (
+    <iframe
+      width="320"
+      height="220"
+      src={embedUrl}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="YouTube video player"
+    ></iframe>
+  );
 };
 
 export default VideoPlayer;
