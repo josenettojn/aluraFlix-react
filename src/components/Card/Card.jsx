@@ -1,12 +1,11 @@
-import VideoPlayer from '../VideoYt/VideoYt'
-import styles from './Card.module.css'
+import VideoPlayer from "../VideoYt/VideoYt";
+import styles from "./Card.module.css";
 
 const Card = (props) => {
-  const {title, url} = props
+  const { title, url } = props;
   return (
     <div className={styles.card}>
       <VideoPlayer videoUrl={url} />
-      <h3>{title}</h3>
       <div className={styles.actions}>
         <div className={styles.action}>
           <img src="/images/trash.png" alt="" />
@@ -18,7 +17,7 @@ const Card = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

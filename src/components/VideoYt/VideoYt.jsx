@@ -1,9 +1,10 @@
-import YouTube from 'react-youtube';
+import YouTube from "react-youtube";
 
 const VideoPlayer = ({ videoUrl }) => {
   const getVideoId = (url) => {
     // Regex para extrair o ID do vídeo do YouTube
-    const regExp = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    const regExp =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = url.match(regExp);
     return match ? match[1] : null;
   };
@@ -15,8 +16,8 @@ const VideoPlayer = ({ videoUrl }) => {
   }
 
   const opts = {
-    height: '220',
-    width: '380',
+    height: "220",
+    width: "320",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 0,

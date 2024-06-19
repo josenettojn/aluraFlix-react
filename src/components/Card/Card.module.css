@@ -1,5 +1,5 @@
 .card {
-  width: 432px;
+  width: 320px;
   height: 320px;
   display: flex;
   flex-direction: column;
@@ -20,8 +20,11 @@
 .action {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   cursor: pointer;
+}
+.action img {
+  width: 18px;
 }
 .action span {
   font-size: 16px;

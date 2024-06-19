@@ -17,12 +17,35 @@ const NewVideo = () => {
     e.preventDefault();
     console.log(title, imageUrl, videoUrl, description);
     console.log(category);
-    console.log("enviado");
+    const newVideo = {
+      title,
+      imageUrl,
+      videoUrl,
+      category,
+      description,
+    };
+    if (newVideo) {
+      fetch("http://localhost:5000/videos", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newVideo),
+      }).then(() => {
+        console.log("enviado");
+      });
+
+      handleClearInputs(e);
+
+      alert("Vídeo criado com sucesso!");
+    }
   };
 
   const handleClearInputs = (e) => {
     e.preventDefault();
+
     setTitle("");
+    setCategory("");
     setImageUrl("");
     setVideoUrl("");
     setDescription("");
