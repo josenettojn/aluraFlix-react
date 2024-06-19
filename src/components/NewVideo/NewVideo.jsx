@@ -20,9 +20,6 @@ const NewVideo = () => {
   const handleSendVideo = async (e) => {
     e.preventDefault();
 
-    console.log(title, imageUrl, videoUrl, description);
-    console.log(category);
-
     const newVideo = {
       title,
       imageUrl,
@@ -30,6 +27,7 @@ const NewVideo = () => {
       category,
       description,
     };
+
     try {
       const response = await fetch("http://localhost:5000/videos", {
         method: "POST",
@@ -40,12 +38,10 @@ const NewVideo = () => {
       });
 
       if (response.ok) {
-        console.log("Vídeo enviado com sucesso:", newVideo);
         alert("Vídeo criado com sucesso!");
         addVideo(newVideo);
         handleClearInputs();
 
-        // Redireciona para a página inicial após adicionar o vídeo
         navigate("/");
       } else {
         console.error("Erro ao enviar o vídeo:", response.statusText);
