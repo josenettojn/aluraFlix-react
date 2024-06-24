@@ -33,9 +33,29 @@ export const VideoProvider = ({ children }) => {
       console.error("Erro ao deletar o vídeo:", error);
     }
   };
+  const updateVideo = async (updatedVideo) => {
+    try {
+      await fetch(`http://localhost:5000/videos/${updatedVideo.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedVideo),
+      });
+      setVideos((prevVideos) =>
+        prevVideos.map((video) =>
+          video.id === updatedVideo.id ? updatedVideo : video
+        )
+      );
+    } catch (error) {
+      console.error("Erro ao atualizar o vídeo:", error);
+    }
+  };
 
   return (
-    <VideoContext.Provider value={{ videos, addVideo, deleteVideo }}>
+    <VideoContext.Provider
+      value={{ videos, addVideo, deleteVideo, updateVideo }}
+    >
       {children}
     </VideoContext.Provider>
   );

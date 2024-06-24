@@ -21,7 +21,7 @@ const Card = (props) => {
         </div>
         <div className={styles.action}>
           <img src="/images/edit.png" alt="" />
-          <DialogDemo />
+          <DialogDemo videoId={id} />
         </div>
       </div>
     </div>
