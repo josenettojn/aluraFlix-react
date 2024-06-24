@@ -1,24 +1,52 @@
 {
   "videos": [
     {
-      "id": "3",
-      "category": "backend",
-      "title": "Introdução ao React",
-      "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
-    },
-    {
-      "id": "5",
+      "id": "4921",
+      "title": "Guia de Carreira: iOS",
+      "imageUrl": "https://www.youtube.com/watch?v=UrD_PIjNuEo",
+      "url": "https://www.youtube.com/watch?v=UrD_PIjNuEo",
       "category": "mobile",
-      "title": "Introdução ao mobile",
-      "url": "https://www.youtube.com/watch?v=jdVFUznQbH0"
+      "description": "Explore o universo do desenvolvimento mobile iOS com o Tech Guide da Alura. Desvende os segredos da plataforma da Apple com dicas de estudos."
     },
     {
-      "id": "43af",
-      "title": "teste",
-      "imageUrl": "https://www.youtube.com/watch?v=xHZ1tv6NzXU",
-      "url": "https://www.youtube.com/watch?v=xHZ1tv6NzXU",
+      "id": "3ff1",
+      "title": "useState: aprenda o React Hook neste TUTORIAL | #AluraMais",
+      "imageUrl": "",
+      "url": "https://www.youtube.com/watch?v=KdQa4Rd6K1A",
       "category": "frontend",
-      "description": "erwer"
+      "description": "Entenda neste tutorial de Hooks React, sobre o que é o useState e porque usá-lo é importante para buscar dados, atualizar estados e renderizar a sua aplicação. Aprenda a como usar o useState na prática e com diferentes soluções para resolver exemplos do dia a dia."
+    },
+    {
+      "id": "8b23",
+      "title": "useRef: como funciona esse React Hook | #AluraMais",
+      "imageUrl": "",
+      "url": "https://www.youtube.com/watch?v=BwRxBGsT_f0",
+      "category": "frontend",
+      "description": "Como funciona o useRef? Este Hook do React js é capaz de guardar uma referência ou valor mutável e manipular elementos do DOM sem sofrer re-renderização, confira neste pequeno tutorial como usar o useRef e qual poder te dará na programação Front-End."
+    },
+    {
+      "id": "31ef",
+      "title": "Hook useCallback x useMemo: performance no React | #AluraMais",
+      "imageUrl": "",
+      "url": "https://www.youtube.com/watch?v=VVmGrEZoBvM",
+      "category": "",
+      "description": "Através dos hooks useCallback e useMemo, aprenda quando e como otimizar a performance do seu código React JS, através da melhoria na renderização do componente analisado."
+    },
+    {
+      "id": "f78a",
+      "title": "Hook useCallback x useMemo: performance no React | #AluraMais",
+      "imageUrl": "",
+      "url": "https://www.youtube.com/watch?v=VVmGrEZoBvM",
+      "category": "frontend",
+      "description": "Através dos hooks useCallback e useMemo, aprenda quando e como otimizar a performance do seu código React JS, através da melhoria na renderização do componente analisado."
+    },
+    {
+      "id": "1b4c",
+      "title": "O que é Node.js? | #AluraMais",
+      "imageUrl": "",
+      "url": "https://www.youtube.com/watch?v=8VSTrZY8vwI",
+      "category": "backend",
+      "description": "A Juliana Amoasei, Instrutora na Escola de Programação aqui na Alura, apresenta a vocês o Node.js, o ambiente de execução do Javascript. "
     }
   ]
 }
