@@ -1,4 +1,5 @@
 import { useVideos } from "../../context/VideoContext";
+import DialogDemo from "../Dialog/Dialog";
 import VideoPlayer from "../VideoYt/VideoYt";
 import styles from "./Card.module.css";
 
@@ -20,7 +21,7 @@ const Card = (props) => {
         </div>
         <div className={styles.action}>
           <img src="/images/edit.png" alt="" />
-          <span>editar</span>
+          <DialogDemo />
         </div>
       </div>
     </div>
