@@ -71,6 +71,12 @@ input {
 .Input:focus {
   box-shadow: 0 0 0 2px var(--violet-8);
 }
+.ButtonEditar {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 .Buttons {
   display: flex;
   justify-content: space-between;

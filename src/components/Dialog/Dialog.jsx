@@ -11,7 +11,7 @@ import ButtonTech from "../Buttons/ButtonTech";
 const DialogDemo = () => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
-      <button className="Button violet">EDITAR</button>
+      <button className="ButtonEditar">EDITAR</button>
     </Dialog.Trigger>
     <Dialog.Portal>
       <Dialog.Overlay className="DialogOverlay" />

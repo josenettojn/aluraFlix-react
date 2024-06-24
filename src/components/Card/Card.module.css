@@ -21,7 +21,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  cursor: pointer;
 }
 .action img {
   width: 18px;
@@ -30,4 +29,5 @@
   font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
+  cursor: pointer;
 }
